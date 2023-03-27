@@ -31,12 +31,23 @@ header {
   justify-content: center;
   align-items: center;
   height: 600px;
-
 }
 
 header h1{
   color: white;
   font-size: 4em;
+}
+
+ol{
+  list-style: none;
+}
+
+ol > li {
+  counter-increment: listcounter;
+}
+
+ol > li::before {
+  content: counter(listcounter) ")";
 }
 
 hr {
@@ -73,13 +84,13 @@ hr {
 }
 
 .ingredients h2{
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 .ingredients ul {
   line-height: 1.6rem;
-  list-style: inside;
-  text-indent: 30px;
+  list-style-type: "-";
+  margin-left: 15px;
 }
 
 .ingredients img{
@@ -89,18 +100,17 @@ hr {
   padding: 20px;
 }
 
-
 .directions{
   display: flex;
   flex-direction: column;
 }
 
 .directions h2 {
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 .directions ol {
   line-height: 1.2rem;
   list-style-position: inside;
-  text-indent: 30px;
+  margin-left: 15px;
 }
